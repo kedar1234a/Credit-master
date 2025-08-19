@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Master | Personal Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Credit Master</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#process">How It Works</a></li>
+                    <li><a href="#loan-form">Loan Application</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Personal Services</h1>
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="office1.jpg" alt="Financial Services" />
+            </div>
+            <div class="hero-content">
+                <p>Get quick and hassle-free financial solutions with Credit Master.</p>
+                <ul>
+                    <li><i class="fas fa-star"></i> Get up to Rs.15 Lakhs Personal Financial Consultancy Service Instantly!</li>
+                    <li><i class="fas fa-star"></i> Pre-approved Financial Consultancy Service Offers</li>
+                    <li><i class="fas fa-star"></i> Lowest Interest Rates</li>
+                    <li><i class="fas fa-star"></i> Very Quick Disbursal</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="eligibility">
+        <h2>Eligibility Criteria</h2>
+        <div class="criteria-grid">
+            <div class="card">
+                <h3>Salaried Person</h3>
+                <ul>
+                    <li>Minimum salary Rs. 15,000/- per month</li>
+                    <li>6 months job stability</li>
+                    <li>Minimum age 21 years</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Self-Employed Person</h3>
+                <ul>
+                    <li>Minimum 6 months IT return</li>
+                    <li>6 months business stability</li>
+                    <li>Minimum age 21 years</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="process">
+        <h2>How It Works?</h2>
+        <div class="process-container card">
+            <ul class="process-list">
+                <li><i class="fas fa-check-circle"></i> Quick Registration</li>
+                <li><i class="fas fa-check-circle"></i> Check Eligibility</li>
+                <li><i class="fas fa-check-circle"></i> Buy Consultation Card</li>
+                <li><i class="fas fa-check-circle"></i> Submit Documents</li>
+                <li><i class="fas fa-check-circle"></i> Bank Verification</li>
+                <li><i class="fas fa-check-circle"></i> Bank Sanction</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="loan-form">
+        <div class="loan-form-container">
+            <div class="loan-form-image">
+                <img src="Office2.jpg" alt="Loan Application" />
+            </div>
+            <div class="loan-form">
+                <label for="name">Name <span style="color: red;">*</span></label>
+                <input type="text" id="name" placeholder="Enter Full Name" required>
+                <label for="email">Email <span style="color: red;">*</span></label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <label for="phone">Phone Number <span style="color: red;">*</span></label>
+                <input type="tel" id="phone" placeholder="Enter 10-digit Phone Number" required>
+                <label for="city">City <span style="color: red;">*</span></label>
+                <input type="text" id="city" placeholder="Enter City" required>
+                <label for="state">State <span style="color: red;">*</span></label>
+                <input type="text" id="state" placeholder="Enter State" required>
+                <label for="financial-amount">Required Financial Amount (₹) <span style="color: red;">*</span></label>
+                <input type="number" id="financial-amount" placeholder="Enter Required Financial Amount" required min="1000">
+                <label for="occupation">Occupation <span style="color: red;">*</span></label>
+                <select id="occupation" required>
+                    <option value="" disabled selected>Select Occupation</option>
+                    <option value="salaried">Salaried</option>
+                    <option value="self-employed">Self-Employed</option>
+                </select>
+                <button type="button" id="send-otp" onclick="sendOTP()">Send OTP</button>
+                <div class="otp-section" id="otp-section">
+                    <label for="otp">Enter OTP <span style="color: red;">*</span></label>
+                    <input type="text" id="otp" placeholder="Enter OTP" required>
+                    <button type="button" id="verify-otp" onclick="verifyOTP()">Verify OTP</button>
+                </div>
+                <div class="payment-section" id="payment-section" style="display: none;">
+                    <p>Processing Fee: <span id="fee-amount"></span></p>
+                </div>
+                <button type="button" id="submit-form" onclick="submitForm()" disabled>Submit Application</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>About Us</h4>
+                <p>With the primary goal of facilitating ease and helping people achieve their financial goals faster, CREDIT MASTER Flycredit is your one-stop solution for getting top-notch financial consultation and services.</p>
+            </div>
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li>Personal Financial Consultation</li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h4>GET FREE LINKS</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#process">How It Works</a></li>
+                    <li><a href="#loan-form">Loan Application</a></li>
+                </ul>
+            </div>
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <p>Email: creditmaster500@gmail.com</p>
+                <p>Phone: +91 123 456 7890</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Credit Master. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
